@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/style.css">
+   
 </head>
 
 <body>
@@ -123,7 +124,7 @@
                         <div>
                             <div class="flex items-center justify-center bg-slate-200 p-2 rounded-xl w-40">
                                 <img class="" src="styles/images/seat-green.png" alt="">
-                                <a class="font-bold text-md text-[#1DD100] "><span>40</span> Seats left</a>
+                                <a class="font-bold text-md text-[#1DD100] "><span id="total-seat">40</span> Seats left</a>
                             </div>
                         </div>
                     </div>
@@ -188,45 +189,42 @@
 
 
 
-                    <div class="mt-6 ml-5 grid grid-cols-5 gap-4 w-80 ">
+                    <div  class="mt-6 ml-5 grid grid-cols-5 gap-4 w-80 ">
 
                         <!-- Seat 1 -->
                         <div class="col-span-4"></div>
                         <div class="col-span-1 bg-gray-200 text-center rounded-xl p-2">Driver</div>
                         <button class="col-span-1  p-4 rounded-xl">A</button>
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">A1</button>
-                        <!-- Seat 2 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">A2</button>
-                        <!-- Seat 3 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl ">A3</button>
-                        <!-- Seat 4 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">A4</button>
+                        <button class=" seat  col-span-1 bg-gray-200 p-4 rounded-xl seat" >A1</button>
+                        <button class=" seat col-span-1 bg-gray-200 p-4 rounded-xl seat" >A2</button>
+                        <button class=" seat col-span-1 bg-gray-200 p-4 rounded-xl seat">A3</button>
+                        <button class=" seat col-span-1 bg-gray-200 p-4 rounded-xl seat">A4</button>
                         <button class="col-span-1  p-4 rounded-xl">B</button>
 
 
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">B1</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">B1</button>
                         <!-- Seat 2 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">B2</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">B2</button>
                         <!-- Seat 3 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">B3</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">B3</button>
                         <!-- Seat 4 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">B4</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">B4</button>
                         <button class="col-span-1  p-4 rounded-xl">C</button>
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">C1</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">C1</button>
                         <!-- Seat 2 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">C2</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">C2</button>
                         <!-- Seat 3 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">C3</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">C3</button>
                         <!-- Seat 4 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">C4</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">C4</button>
                         <button class="col-span-1 p-4 rounded-xl">D</button>
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">D1</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">D1</button>
                         <!-- Seat 2 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">D2</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">D2</button>
                         <!-- Seat 3 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">D3</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">D3</button>
                         <!-- Seat 4 -->
-                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl">D4</button>
+                        <button class="col-span-1 bg-gray-200 p-4 rounded-xl seat ">D4</button>
                         <button class="col-span-1  p-4 rounded-xl">E</button>
 
 
@@ -293,27 +291,27 @@
                     <div class="bg-slate-200 rounded-xl pb-6 ">
                         <div class="mt-5 p-5 flex gap-24">
                             <div class="">
-                                <h1 class="font-bold inline-flex ">Seat</h1><span
+                                <h1 class="font-bold inline-flex ">Seat</h1><span id="seat-count"
                                     class="text-[#1DD100] font-bold ml-1 ">0</span>
-                                <p>C2</p>
-                                <p>C2</p>
+                                <p id="seat-no"></p>
+                                
                             </div>
                             <div class="">
                                 <h1 class="font-bold">Class</h1>
-                                <p>Economy</p>
-                                <p>Economy</p>
+                                <p id="class-name"></p>
+                    
                             </div>
                             <div>
                                 <h1 class="font-bold">Price</h1>
-                                <p>550</p>
-                                <p>550</p>
+                                <p id="price"></p>
+                                
                             </div>
                         </div>
                         <div class="w-auto mx-1 h-[1px] bg-amber-950"></div>
 
                         <div class="mx-4 mb-3 flex justify-between">
                             <h1 class="font-bold">Total price</h1>
-                            <h1 class="font-bold">BDT<span>1100</span></h1>
+                            <h1 class="font-bold">BDT<span id="total-price">0</span></h1>
                         </div>
                         <div class="relative flex items-stretch px-7">
                             <input type="text" placeholder="Have any coupon?" class="flex-1 border rounded-xl p-3">
@@ -325,19 +323,19 @@
 
                         <div class="mx-4 mt-3 flex justify-between">
                             <h1 class="font-bold">Grand Total </h1>
-                            <h1 class="font-bold">BDT<span>1100</span></h1>
+                            <h1 class="font-bold">BDT<span  id="grand-total">0</span></h1>
                         </div>
 
 
                     </div>
-                    <h1 class="font-bold text-base mt-5 mb-3">Passenger Name*</h1>
-                    <input type="text" placeholder="Enter your name" class="p-3  rounded-xl border w-full">
+                    <h1  class="font-bold text-base mt-5 mb-3">Passenger Name*</h1>
+                    <input id="name" type="text" placeholder="Enter your name" class="p-3  rounded-xl border w-full" oninput="calculateInputLength()">
                     <h1 class="font-bold text-base mt-5 mb-3">Phone Number*</h1>
-                    <input type="text" placeholder="Enter phone number" class="p-3  rounded-xl border w-full">
+                    <input id="phone-num"  type="text" placeholder="Enter phone number" class="p-3  rounded-xl border w-full">
 
                     <h1 class="font-bold text-base mt-5 mb-3">Email</h1>
                     <input type="text" placeholder="Enter your email" class="p-3  rounded-xl border w-full">
-                    <button class="w-full bg-[#1DD100] text-white font-bold p-3 mt-7 rounded-xl">Next</button>
+                    <button onclick="success()" class="w-full bg-[#1DD100] text-white font-bold p-3 mt-7 rounded-xl">Next</button>
 
                      <div class=" text-style flex mt-4 justify-between">
                         <a href="#">Terms and Conditions</a>
@@ -356,6 +354,25 @@
 
 
     </section>
+      <!-- success part -->
+    <div id="success-section" class="w-full flex justify-center items-center hidden ">
+        <div class="bg-slate-300 flex justify-center px-64 py-16 items-center rounded-xl mt-10">
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="styles/images/success.png" alt="#" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-[#20AE5C] font-bold">SUCCESS</h2>
+                  <p>Thank You for booking our bus seats.</p>
+                  <div class="card-actions">
+                    <button class=" px-16 py-2 rounded-3xl border-0 text-white bg-[#20AE5C] font-semibold ">Continue</button>
+                  </div>
+                </div>
+              </div>
+    
+        </div>
+    </div>
+   
 
 
 

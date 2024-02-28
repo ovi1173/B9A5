@@ -2,3 +2,6 @@
 .text-style{
     text-decoration: underline;
 }
+.selected-seat{
+    background-color: #1DD100;
+}
