@@ -10,7 +10,10 @@ function success() {
     hideElementById('banner-section');
     hideElementById('offer-section');
     hideElementById('ticket-section');
+    hideElementById('footer-section');
+    hideElementById('nav-section');
     showElementById('success-section');
+
 }
 
 
